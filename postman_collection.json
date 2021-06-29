@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "27794ef1-0b20-459d-b12d-f203ea7788a0",
+		"name": "springboot_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET AWS SERVER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Hello, Danilo from devco. GET method\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/greetings?name=Danilo",
+					"host": [
+						"3",
+						"130",
+						"50",
+						"98"
+					],
+					"port": "8080",
+					"path": [
+						"greetings"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Danilo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET AWS SERVER",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/greetings?name=Danilo",
+							"host": [
+								"3",
+								"130",
+								"50",
+								"98"
+							],
+							"port": "8080",
+							"path": [
+								"greetings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Danilo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Jun 2021 08:37:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Hello, Danilo from devco. GET method"
+				}
+			]
+		},
+		{
+			"name": "POST AWS SERVER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Hello, Danilo from devco. PUT method\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/greetings?name=Danilo",
+					"host": [
+						"3",
+						"130",
+						"50",
+						"98"
+					],
+					"port": "8080",
+					"path": [
+						"greetings"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Danilo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST AWS SERVER",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/greetings?name=Danilo",
+							"host": [
+								"3",
+								"130",
+								"50",
+								"98"
+							],
+							"port": "8080",
+							"path": [
+								"greetings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Danilo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Jun 2021 08:42:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Hello, Danilo from devco. PUT method"
+				}
+			]
+		},
+		{
+			"name": "PUT AWS SERVER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Hello, Danilo from devco. PUT method\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/greetings?name=Danilo",
+					"host": [
+						"3",
+						"130",
+						"50",
+						"98"
+					],
+					"port": "8080",
+					"path": [
+						"greetings"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Danilo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT AWS SERVER",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/greetings?name=Danilo",
+							"host": [
+								"3",
+								"130",
+								"50",
+								"98"
+							],
+							"port": "8080",
+							"path": [
+								"greetings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Danilo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Jun 2021 08:42:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Hello, Danilo from devco. PUT method"
+				}
+			]
+		},
+		{
+			"name": "DELETE AWS SERVER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Hello, Danilo from devco. DELETE method\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/greetings?name=Danilo",
+					"host": [
+						"3",
+						"130",
+						"50",
+						"98"
+					],
+					"port": "8080",
+					"path": [
+						"greetings"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Danilo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE AWS SERVER",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/greetings?name=Danilo",
+							"host": [
+								"3",
+								"130",
+								"50",
+								"98"
+							],
+							"port": "8080",
+							"path": [
+								"greetings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Danilo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Jun 2021 08:43:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Hello, Danilo from devco. DELETE method"
+				}
+			]
+		}
+	]
+}
