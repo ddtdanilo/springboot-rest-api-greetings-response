@@ -10,39 +10,35 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class greetings {
 
-    @GetMapping("/greetings")
-    public String getResponse(@RequestParam String name) {
+  @GetMapping("/greetings")
+  public String getResponse(@RequestParam String name) {
 
-        String output = "Hello, " + name + " from devco. GET method";
+    String output = "Hello, " + name + " from devco. GET method";
 
-        return output;
+    return output;
+  }
 
-    }
+  @PostMapping("/greetings")
+  public String postResponse(@RequestParam String name) {
 
-    @PostMapping("/greetings")
-    public String postResponse(@RequestParam String name) {
+    String output = "Hello, " + name + " from devco. PUT method";
 
-        String output = "Hello, " + name + " from devco. PUT method";
+    return output;
+  }
 
-        return output;
+  @DeleteMapping("/greetings")
+  public String deleteResponse(@RequestParam String name) {
 
-    }
+    String output = "Hello, " + name + " from devco. DELETE method";
 
-    @DeleteMapping("/greetings")
-    public String deleteResponse(@RequestParam String name) {
+    return output;
+  }
 
-        String output = "Hello, " + name + " from devco. DELETE method";
+  @PutMapping("/greetings")
+  public String putResponse(@RequestParam String name) {
 
-        return output;
+    String output = "Hello, " + name + " from devco. PUT method";
 
-    }
-    
-    @PutMapping("/greetings")
-    public String putResponse(@RequestParam String name) {
-
-        String output = "Hello, " + name + " from devco. PUT method";
-
-        return output;
-
-    }
+    return output;
+  }
 }
