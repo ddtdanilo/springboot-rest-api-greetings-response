@@ -1,0 +1,58 @@
+# This workflow will build a Java project with Gradle
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
+
+name: CI checks
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+          distribution: "adopt"
+
+      - name: Google Java Format
+        # You may pin to the exact commit or the version.
+        # uses: axel-op/googlejavaformat-action@5045c8c244a22eb6a28eeb6050cc2baebd75c5f2
+        uses: axel-op/googlejavaformat-action@v3.4.0
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: |
+          sudo apt-get install screen # for running in other instances
+          ./gradlew build
+          screen -d -m bash -c "./gradlew bootRun"
+          echo Waiting to deploy the local server
+          sleep 5
+
+      - name: postman for API test
+        uses: matt-ball/newman-action@master
+        with:
+          collection: postman_collection.json
+
+      - name: Run Workflow
+        id: write_file
+        uses: timheuer/base64-to-file@v1
+        with:
+          fileName: 'key.pem'
+          encodedString: ${{secrets.SSH_KEY}}
+
+      - name: changes permissions of the key 
+        run: |
+          cp ${{ steps.write_file.outputs.filePath }} key.pem
+          chmod 400 key.pem # Secure and read only for AWS is a must 
+      - name: deploy in AWS instance
+        run:  cat deploy_server.sh | ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98 /bin/bash
