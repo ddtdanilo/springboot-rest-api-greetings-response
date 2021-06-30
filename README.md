@@ -1,26 +1,48 @@
 # springboot-rest-api-greetings-response
 
-![gradle](https://github.com/ddtdanilo/springboot-rest-api-greetings-response/blob/dev/.github/workflows/gradle.yml/badge.svg)
 
-# Getting Started
+# REST API GREETINGS
 
-### Reference Documentation
-For further reference, please consider the following sections:
+The REST API just say hi to you. Methods available in the API:
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.2/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.2/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.2/reference/htmlsingle/#boot-features-developing-web-applications)
+`GET /greetings/`
+`PUT /greetings/`
+`POST /greetings/`
+`DELETE /greetings/`
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### Request
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
+Here are two examples to test with cURL. If you want to test all the API methods (without running the pipeline), use postman and the `postman_collection.json`
+## Examples
 
-### Additional Links
-These additional references should also help you:
+`GET /greetings/`
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+    curl -i -H 'Accept: application/json' http://3.130.50.98:8080/greetings?name=Danilo
+
+### Response
+
+    HTTP/1.1 200
+    Content-Type: application/json
+    Content-Length: 36
+    Date: Wed, 30 Jun 2021 17:46:54 GMT
+
+    Hello, Danilo from devco. GET method
+
+
+`POST /thing/`
+
+    curl -i -H 'Accept: application/json' -d 'name=Danilo' http://3.130.50.98:8080/greetings
+
+### Response
+
+    HTTP/1.1 200
+    Content-Type: application/json
+    Content-Length: 36
+    Date: Wed, 30 Jun 2021 17:52:01 GMT
+
+    Hello, Danilo from devco. POST method
+    
+# Diagram
+
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l84gFQM=/?moveToViewport=318,1584,1289,1687" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 
