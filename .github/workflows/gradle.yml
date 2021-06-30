@@ -55,7 +55,4 @@ jobs:
           cp ${{ steps.write_file.outputs.filePath }} key.pem
           chmod 400 key.pem # Secure and read only for AWS is a must 
       - name: deploy in AWS instance
-        run: |
-          ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98
-          # ssh -i key.pem ubuntu@3.130.50.98
-          ifconfig
+        run:  cat deploy_server.sh | ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98 bash /bin/bash
