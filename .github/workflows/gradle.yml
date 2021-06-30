@@ -58,4 +58,7 @@ jobs:
         run:  cat deploy_server.sh | ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98 /bin/bash
 
       - name: Run in server
-        run:  cat run_server.sh | ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98 /bin/bash
+        run: |
+          (cat deploy_server.sh | sudo ssh -tt -o "StrictHostKeyChecking no" -i key.pem ubuntu@3.130.50.98 /bin/bash) &
+          sleep 5
+          
