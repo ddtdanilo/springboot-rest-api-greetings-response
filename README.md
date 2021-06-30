@@ -1,3 +1,4 @@
+
 # springboot-rest-api-greetings-response
 
 
@@ -43,6 +44,9 @@ Here are two examples to test with cURL. If you want to test all the API methods
     Hello, Danilo from devco. POST method
     
 # Diagram
+    
+You can see it in Miro App
 
-    ![](/diagram.jpg)
+    https://miro.com/app/board/o9J_l84gFQM=/
+   [Diagram](https://i.ibb.co/nrzPK8s/Flowchart.jpg)
 
