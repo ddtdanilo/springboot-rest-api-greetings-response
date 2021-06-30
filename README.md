@@ -44,5 +44,5 @@ Here are two examples to test with cURL. If you want to test all the API methods
     
 # Diagram
 
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l84gFQM=/?moveToViewport=318,1584,1289,1687" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+    ![](/diagram.jpg)
 
